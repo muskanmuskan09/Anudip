@@ -1,0 +1,5 @@
+f=open("agc.text","r")
+s=f.readlines()
+print(s)
+print(type(s))
+f.close()

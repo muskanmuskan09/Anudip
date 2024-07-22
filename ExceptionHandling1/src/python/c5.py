@@ -1,0 +1,10 @@
+from cx_Oracle import *
+con=connect("system","career")
+print(con)
+print(con.version)
+cur=con.cursor()
+print(cur)
+eno=int(input("Enter empno:"))
+s=int(input("Enter amount:"))
+cur.execute("insert into emp(empno,sal) values(:1,:2)",(eno,s))
+con.commit()
